@@ -8,7 +8,7 @@ export default function App() {
     setLoading(true);
     setMessage('');
     try {
-      const res = await fetch('http://localhost:5000/api/message');
+      const res = await fetch('http://backend:5000/api/message');
       if (!res.ok) throw new Error('Network response was not ok');
       const data = await res.json();
       setMessage(data.message || JSON.stringify(data));
